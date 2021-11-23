@@ -39,7 +39,7 @@ module.exports = {
         if (!isMatch) return res.status(400).json({ done: false, message })
 
         const jwt = generateToken(response.id, response.alumnId)
-        res.json({ done: true, message: "", token: jwt })
+        res.json({ done: true, message: "", token: jwt, data: { UserId: response.id, UserCode: response.alumnId } })
     },
 
 

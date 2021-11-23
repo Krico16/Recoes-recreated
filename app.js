@@ -5,7 +5,8 @@ var logger = require('morgan');
 
 var app = express();
 
-app.disable('x-powered-by')
+// app.disable('x-powered-by')
+app.set('x-powered-by',false)
 
 app.use(logger('dev'));
 app.use(express.json());
